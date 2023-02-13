@@ -5,7 +5,7 @@ const register = async (req, resp) => {
   if (!FilterData) {
     const data = new AdminRegister(req.body);
     await data.save();
-    resp.send({ response: "register successfully" });
+    resp.send({ response: "register successfully", status: 200 });
   } else {
     resp.send({ response: " already available this user" });
   }

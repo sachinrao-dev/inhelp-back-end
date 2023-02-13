@@ -6,12 +6,12 @@ const AddService = async (req, resp) => {
     email: req.body.email,
     description: req.body.description,
   });
-  if (!FilterUser) {
+  if (!FilterUser.length) {
     const data = new ServiceSch(req.body);
     await data.save();
-    resp.send("service successfully added");
+    resp.send({ response: "service successfully added", status: 200 });
   } else {
-    resp.send("This Service is already available");
+    resp.send({ response: "This Service is already available" });
   }
 };
 
