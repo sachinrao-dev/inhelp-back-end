@@ -9,8 +9,8 @@ const app = express();
 const port = process.env.PORT || 8090;
 mongooseDB(process.env.MONGOOSE_URL);
 
-app.use(json());
 app.use(cors());
+app.use(json());
 app.use("/inhelp", AdminRouter);
 
 app.listen(port);
