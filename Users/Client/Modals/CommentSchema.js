@@ -6,10 +6,10 @@ const CommentSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    // nameBy: {
-    //   type: String,
-    //   required: true,
-    // },
+    nameBy: {
+      type: String,
+      required: true,
+    },
   },
   { timestamps: true },
 );

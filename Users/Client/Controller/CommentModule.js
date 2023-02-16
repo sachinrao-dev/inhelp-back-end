@@ -10,7 +10,7 @@ const CommentModule = (req, resp) => {
       item.comments.push(comment);
       return item.save();
     })
-    .then(() => resp.send("hii"));
+    .then(() => resp.send({ response: "comment added", status: 200 }));
 };
 
 module.exports = CommentModule;
