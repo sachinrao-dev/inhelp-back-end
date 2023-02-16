@@ -6,6 +6,6 @@ const CommentModule = require("../Controller/CommentModule");
 const router = express.Router();
 router.route("/dashboard").get(Dashboard);
 router.route("/search/:key").get(SearchService);
-router.route("/comment").get(CommentModule);
+router.route("/comment/:id").post(CommentModule);
 
 module.exports = router;

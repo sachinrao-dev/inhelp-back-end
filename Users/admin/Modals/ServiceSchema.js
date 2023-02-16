@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
 
+const { Schema } = mongoose;
+
 const AddServiceSchema = mongoose.Schema({
   name: {
     type: String,
@@ -21,6 +23,7 @@ const AddServiceSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  comments: [{ type: Schema.Types.ObjectId, ref: "Comment" }],
 });
 const AddService = mongoose.model("addService", AddServiceSchema);
 module.exports = AddService;
